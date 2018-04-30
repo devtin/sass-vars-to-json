@@ -6,8 +6,8 @@ $ npm install sass-vars-to-json
 ```
 
 ## Usage
+example.scss
 ``` scss
-# example.scss
 $toolbarHeight: 60px;
 $palette: (
   white: #e7e7e7,
@@ -18,6 +18,7 @@ $theme: (
   head-background: map-get($palette, orange)
 );
 ```
+index.js
 ``` js
 const sassVarsToJSON = require('sass-vars-to-json')
 sassVarsToJSON('./example.scss')
