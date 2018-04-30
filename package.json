@@ -1,6 +1,6 @@
 {
   "name": "sass-vars-to-json",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Return vars that are in a scss file into a JSON object.",
   "main": "index.js",
   "scripts": {
