@@ -1,0 +1,10 @@
+$toolbarHeight: 60px;
+$palette: (
+  white: #e7e7e7,
+  orange: #fc0
+);
+$theme: (
+  font: "Arial, sans-serif",
+  head-height: 60%,
+  head-background: map-get($palette, orange)
+);

@@ -1,0 +1,32 @@
+{
+  "name": "sass-vars-to-json",
+  "version": "1.1.1",
+  "description": "Converts sass variables into JSON objects.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "test": "NODE_ENV=test ava --verbose --serial",
+    "publishit": "git push --follow-tags origin master && npm publish"
+  },
+  "author": {
+    "name": "Martin Rafael Gonzalez",
+    "email": "marting.dc@gmail.com",
+    "url": "http://devtin.io"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "node-sass": "^4.9.0",
+    "sass-extract": "^2.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0"
+  }
+}
