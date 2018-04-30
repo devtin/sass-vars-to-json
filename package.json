@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint --ext .js --ignore-path .gitignore .",
     "test": "NODE_ENV=test ava --verbose --serial",
-    "release": "standard-version"
+    "release": "standard-version",
+    "publish": "yarn release && git push --follow-tags origin master && npm publish"
   },
   "author": {
     "name": "Martin Rafael Gonzalez",
