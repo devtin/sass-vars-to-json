@@ -1,4 +1,6 @@
 $single: "yeah";
+$useSass: true;
+$nullVariable: null;
 
 $color: (
   green: #27BAB4,
@@ -12,12 +14,14 @@ $color: (
   gray-light: #ccc,
   orange: #fc0,
   sand: #fef0c1,
-  white: #e7e7e7
+  white: #e7e7e7,
+  white-50opacity: rgba(#e7e7e7, .5)
 );
 
 $palette: (
   primary: map-get($color, green),
-  secondary: map-get($color, white)
+  secondary: map-get($color, white),
+  tertiary: map-get($color, white-50opacity)
 );
 
 $theme: (
@@ -25,6 +29,7 @@ $theme: (
   secondary: map-get($color, white),
   secondary-alt: map-get($color, white),
   navbar-background: map-get($color, black),
+  navbar-border: 1px solid map-get($palette, tertiary),
   navbar-button-background: transparent,
   navbar-button-background-over: transparent,
   navbar-button-background-active: transparent,
@@ -41,6 +46,7 @@ $theme: (
   headbar-background: map-get($palette, primary),
   nav-icon-color: map-get($color, white),
   headbar-height: 60px,
+  headbar-is-fixed: false,
   headbar-button-sep-color: map-get($color, real-black),
   headbar-button-color: map-get($palette, primary),
   loading-solid-background: map-get($color, black),

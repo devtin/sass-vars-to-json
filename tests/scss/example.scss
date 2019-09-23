@@ -1,4 +1,9 @@
 $toolbarHeight: 60px;
+$toolbarFont: "Roboto-Slab", "Times New Roman", serif;
+$toolbarBoxShadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+$toolbarBgColor: rgba(#e7e7e7, .5);
+$toolbarIsFixed: true;
+$toolbarColor: null;
 $palette: (
   white: #e7e7e7,
   orange: #fc0
