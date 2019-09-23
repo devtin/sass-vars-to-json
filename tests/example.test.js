@@ -20,6 +20,26 @@ test('vars.$toolbarHeight', t => {
   t.is(variables.$toolbarHeight, '60px')
 })
 
+test('vars.$toolbarFont', t => {
+  t.is(variables.$toolbarFont, 'Roboto-Slab, Times New Roman, serif')
+})
+
+test('vars.$toolbarBoxShadow', t => {
+  t.is(variables.$toolbarBoxShadow, '10px 10px 5px 0px rgba(0, 0, 0, 0.75)')
+})
+
+test('vars.$toolbarBgColor', t => {
+  t.is(variables.$toolbarBgColor, 'rgba(231, 231, 231, 0.5)')
+})
+
+test('vars.$toolbarIsFixed', t => {
+  t.is(variables.$toolbarIsFixed, true)
+})
+
+test('vars.$toolbarColor', t => {
+  t.is(variables.$toolbarColor, null)
+})
+
 test('vars.$palette.white', t => {
   t.is(variables.$palette.white, '#e7e7e7')
 })
