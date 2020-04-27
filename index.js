@@ -45,7 +45,7 @@ class SassVarsToJSON {
     const values = list.value
     let parsedString = ''
 
-    const separator = list.separator !== ' ' ? list.separator + ' ' : list.separator;
+    const separator = list.separator !== ' ' ? list.separator + ' ' : list.separator
 
     values.forEach((value, index) => {
       parsedString += `${SassVarsToJSON.parseTypeToValue(value)}${index === values.length - 1 ? '' : separator}`
