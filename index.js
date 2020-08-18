@@ -54,10 +54,12 @@ class SassVarsToJSON {
     return parsedString
   }
 
-  static extract (file) {
-    return sassExtract.render({
+  static extract (file, compileOptions = {}, extractOptions = {}) {
+    const compileOptionsWithFile = {
       file
-    })
+    }
+
+    return sassExtract.render(_.merge(compileOptionsWithFile, compileOptions), extractOptions)
       .then(({ vars: { global } }) => {
         return SassVarsToJSON.parseChunks(global)
       })
