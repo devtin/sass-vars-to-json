@@ -27,7 +27,7 @@ $theme: (
 index.js
 ``` js
 const sassVarsToJSON = require('sass-vars-to-json')
-sassVarsToJSON('./example.scss')
+sassVarsToJSON('./example.scss'/*, compileOptions, extractOptions */)
   .then(vars => {
     console.log(vars.$toolbarHeight); // => '60px'
     console.log(vars.$toolbarFont); // => 'Roboto-Slab, Times New Roman, serif'
