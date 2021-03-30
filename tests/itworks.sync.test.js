@@ -1,5 +1,5 @@
 import test from 'ava'
-import {extract} from '../'
+import {extractSync} from '../'
 import _ from 'lodash'
 
 const path = require('path')
@@ -11,10 +11,7 @@ const scss = (...args) => {
 let variables
 
 test.before('Load variables.scss', () => {
-  return extract(scss('variables.scss'))
-    .then(r => {
-      variables = r
-    })
+  return variables = extractSync(scss('variables.scss'))
 })
 
 test('Returns an object', async t => {

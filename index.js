@@ -64,6 +64,19 @@ class SassVarsToJSON {
         return SassVarsToJSON.parseChunks(global)
       })
   }
+
+  /** extract sync */
+  static extractSync(file, compileOptions = {}, extractOptions = {}) {
+    const compileOptionsWithFile = {
+      file
+    }
+
+    const result = sassExtract.renderSync(
+      _.merge(compileOptionsWithFile, compileOptions),
+      extractOptions
+    )
+    return SassVarsToJSON.parseChunks(result.vars.global)
+  }
 }
 
-module.exports = SassVarsToJSON.extract
+module.exports = SassVarsToJSON

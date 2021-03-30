@@ -1,5 +1,5 @@
 import test from 'ava'
-import {extract} from '../'
+import {extractSync} from '../'
 
 const path = require('path')
 
@@ -10,10 +10,7 @@ const scss = (...args) => {
 let variables
 
 test.before('Load variables.scss', () => {
-  return extract(scss('example.scss'))
-    .then(r => {
-      variables = r
-    })
+  return variables = extractSync(scss('example.scss'))
 })
 
 test('vars.$toolbarHeight', t => {
