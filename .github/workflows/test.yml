@@ -1,0 +1,26 @@
+name: test
+on:
+  push:
+    branches:
+      - '*'         # matches every branch
+      - '!master'   # excludes master since we have a rule accepting only commits with the 'test' workflow passed!
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install node modules
+        run: npm ci --production=false
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm run test -- --verbose
